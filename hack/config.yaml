@@ -11,3 +11,10 @@ gfcli:
     build: "-a amd64 -s linux -p temp -ew"
     tagPrefixes:
       - my.image.pub/my-app
+  build:
+    name: flare
+    arch: "amd64"
+    system: "linux,darwin"
+    path: "./bin"
+    packSrc: "resource,manifest/i18n"
+    version: "v0.1.0"

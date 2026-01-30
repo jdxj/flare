@@ -2,7 +2,10 @@ module flare
 
 go 1.18
 
-require github.com/gogf/gf/v2 v2.7.1
+require (
+	github.com/gogf/gf/v2 v2.7.1
+	github.com/spf13/cobra v1.10.2
+)
 
 require (
 	github.com/BurntSushi/toml v1.3.2 // indirect
@@ -13,11 +16,13 @@ require (
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/gorilla/websocket v1.5.1 // indirect
 	github.com/grokify/html-strip-tags-go v0.1.0 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mattn/go-runewidth v0.0.9 // indirect
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
+	github.com/spf13/pflag v1.0.9 // indirect
 	go.opentelemetry.io/otel v1.14.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.14.0 // indirect
 	go.opentelemetry.io/otel/trace v1.14.0 // indirect
