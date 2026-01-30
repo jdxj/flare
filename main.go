@@ -1,6 +1,8 @@
 package main
 
 import (
+	_ "flare/internal/logic"
+
 	"flare/internal/cmd"
 	_ "flare/internal/packed"
 
