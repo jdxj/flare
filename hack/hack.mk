@@ -44,9 +44,9 @@ endif
 
 
 # Build docker image and automatically push to docker repo.
-.PHONY: image.push
-image.push: cli.install
-	@make image PUSH=-p;
+# .PHONY: image.push
+# image.push: cli.install
+# 	@make image PUSH=-p;
 
 
 # Deploy image and yaml to current kubectl environment.

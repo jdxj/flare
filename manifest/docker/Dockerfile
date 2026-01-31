@@ -1,16 +1,14 @@
-FROM loads/alpine:3.8
+FROM golang:1.25.6-trixie AS builder
 
-###############################################################################
-#                                INSTALLATION
-###############################################################################
+WORKDIR /go/src/flare
+COPY . .
 
-ENV WORKDIR                 /app
-ADD resource                $WORKDIR/
-ADD ./temp/linux_amd64/main $WORKDIR/main
-RUN chmod +x $WORKDIR/main
+RUN apt update && \
+    apt install -y libsystemd-dev && \
+    go build -o /go/bin/flare
 
-###############################################################################
-#                                   START
-###############################################################################
-WORKDIR $WORKDIR
-CMD ./main
+FROM debian:trixie
+
+WORKDIR /app
+COPY --from=builder /go/bin/flare /app/flare
+ENTRYPOINT [ "/app/flare", "run"]

@@ -40,6 +40,7 @@ func NewRoot() *cobra.Command {
 
 	// sub cmd
 	cmd.AddCommand(newVersion())
+	cmd.AddCommand(newRun())
 
 	return cmd
 }
